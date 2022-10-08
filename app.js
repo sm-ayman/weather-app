@@ -29,7 +29,7 @@ searchBtn.addEventListener('click', ()=> {
         // city name 
         city.innerText = data.name; 
         // temperature 
-        temperature.innerText = data.main.temp;
+        temperature.innerText = Math.round(data.main.temp-273.15) + '°' +'C';
         // lead / condition
         condition.innerText = data.weather[0].main;
         }) .catch(()=>{
